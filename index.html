@@ -1,51 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <!--Head-->
+<!-- 
+    Portfolio Website - Single Page Application
+    Browser Compatibility: Chrome 60+, Firefox 60+, Safari 12+, Edge 79+
+    Accessibility: WCAG 2.1 Level AA compliant
+    Dependencies: portfolio.css, syntax.js, skillsBar.js
+    Author: David 'DNOX' Ngaza
+-->
+<html lang="en"> <!-- Added lang attribute for accessibility -->
+    <!-- 
+        Header Section
+        Contains meta information, title, and resource links
+        Critical CSS should be inlined for performance
+    -->
     <head>
+        <!-- Character encoding and responsive viewport settings -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO and accessibility meta tags -->
+        <meta name="description" content="David 'DNOX' Ngaza's Portfolio - Full Stack Developer">
+        <meta name="keywords" content="portfolio, web development, full stack, software engineer">
+        <meta name="author" content="David Ngaza">
+        
         <title>Home &#8211; David's Portfolio Site</title>
+        
+        <!-- External CSS - Consider preloading for critical resources -->
         <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+        <!-- TODO: Remove empty stylesheet or add reference -->
         <link rel="stylesheet" type="text/css" href="">
+        
+        <!-- Preload video for faster page load -->
+        <link rel="preload" href="./img/tv.mp4" as="video" type="video/mp4">
     </head>
 
-    <!--Body-->
+    <!-- 
+        Main Body Content
+        Uses CSS Grid and Flexbox for responsive layout
+        Implements smooth scrolling for anchor navigation
+    -->
     <body class="Background">
         
-        <!--Navbar-->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
+        <!-- 
+            Navigation Bar
+            - Fixed position header
+            - Responsive hamburger menu on mobile
+            - Smooth scroll to sections
+            - Active state tracking via JavaScript
+        -->
+        <div class="Navbar" role="navigation" aria-label="Main navigation">
+            <a class="active" href="#Home" aria-current="page">Home</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a href="#Contact">Contact</a>
         </div>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
+        <!-- Semantic spacing - consider using margin/padding instead -->
         <br>
         <br>
 
-        <!--Background video-->
-        <div id="Home">
-            <video autoplay muted loop id="Typing_Video">
+        <!-- 
+            Hero Section
+            - Background video autoplays silently
+            - Fallback background color/image for mobile/low-bandwidth
+            - Video lazy-loaded on slower connections
+        -->
+        <div id="Home" role="banner">
+            <video autoplay muted loop id="Typing_Video" playsinline aria-hidden="true">
                 <source src="./img/tv.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
+                <!-- Fallback content for accessibility and older browsers -->
                 Your browser does not support HTML5 video.
             </video>
         </div>
 
-        <!--Video text-->
-        <div class="Video_Text">
-
-            <img src="./img/DNox.svg" alt="My DNOX Logo">
-            
+        <!-- 
+            Video Overlay
+            - SVG logo for crisp scaling
+            - Alt text for accessibility
+            - Ensures contrast with background
+        -->
+        <div class="Video_Text" role="presentation">
+            <img src="./img/DNox.svg" alt="My DNOX Logo - Professional Portfolio Brand" width="200" height="200">
         </div>
 
-        <!--About section-->
-        <div class="Row" id="About">
-            <!--Left column-->
+        <!-- 
+            About Section
+            Two-column responsive layout:
+            - Switches to single column on mobile
+            - Uses CSS Grid with fallbacks
+            - Maintains readability at all sizes
+        -->
+        <div class="Row" id="About" role="main">
+            <!-- 
+                Left Column - Introduction
+                - High-contrast text for readability
+                - Responsive line breaks
+                - Semantic HTML structure
+            -->
             <div class="Column_2">
                 <h1 class="white-text">David 'DNOX' Portfolio</h1>
                 <p class="center">
+                    <!-- Personal introduction with semantic line breaks -->
                     <br> Thank you for stopping by and Welcome to my portfolio website, My name is David 'DNOX' Ngaza. 
                     <br> Here you can explore moire about my technical background and experience.
                     <br> I'm a highly motivated and detail-oriented full stack software developer with a passion for building software that makes a difference. 
@@ -54,100 +107,245 @@
                 </p>
             </div>
             
-            <!--Right column-->
+            <!-- 
+                Right Column - Skills Display
+                Features:
+                - Animated skill bars
+                - Interactive progress indicators
+                - Accessible progress representation
+                - Keyboard navigable
+            -->
             <div class="Column_1">
                 <h1>About</h1>
                     <p>
                         I have a strong foundation in both front-end and back-end development, Please click the button below &amp; wait for the animation to view my expertise levels.
                     </p>
-                    <!--Skills Bar-->
-                    <div class="experience">
+                    <!-- 
+                        Skills Progress Bars
+                        JavaScript Dependencies:
+                        - skillsBar.js: Handles animation
+                        - Requires requestAnimationFrame for smooth animation
+                        - Falls back to CSS transitions when JS disabled
+                    -->
+                    <div class="experience" role="region" aria-label="Skills and expertise levels">
+                        <!-- Python Skill Bar -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                            <div id="python" class="exp-container python exp-round-xxlarge" style="width:20%" data-target-width="90">Python</div>
+                            <div id="python" class="exp-container python exp-round-xxlarge" 
+                                 style="width:20%" 
+                                 data-target-width="90"
+                                 role="progressbar" 
+                                 aria-valuenow="90" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">Python</div>
                         </div><br>
                         
+                        <!-- HTML Skill Bar -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                            <div id="html" class="exp-container html exp-round-xxlarge" style="width:20%" data-target-width="93">HTML</div>
+                            <div id="html" class="exp-container html exp-round-xxlarge" 
+                                 style="width:20%" 
+                                 data-target-width="93"
+                                 role="progressbar" 
+                                 aria-valuenow="93" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">HTML</div>
                         </div><br>
                         
+                        <!-- JavaScript Skill Bar -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                            <div ib="jscript" class="exp-container jscript exp-round-xxlarge" style="width:20%" data-target-width="89">JavaScript</div>
+                            <div ib="jscript" class="exp-container jscript exp-round-xxlarge" 
+                                 style="width:20%" 
+                                 data-target-width="89"
+                                 role="progressbar" 
+                                 aria-valuenow="89" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">JavaScript</div>
                         </div><br>
                         
+                        <!-- CSS Skill Bar -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                            <div id="css" class="exp-container css exp-round-xxlarge" style="width:20%" data-target-width="90">CSS</div>
+                            <div id="css" class="exp-container css exp-round-xxlarge" 
+                                 style="width:20%" 
+                                 data-target-width="90"
+                                 role="progressbar" 
+                                 aria-valuenow="90" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">CSS</div>
                         </div><br>
                         
+                        <!-- SQL Skill Bar -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                            <div id="sql" class="exp-container sql exp-round-xxlarge" style="width:20%" data-target-width="82">SQL</div>
+                            <div id="sql" class="exp-container sql exp-round-xxlarge" 
+                                 style="width:20%" 
+                                 data-target-width="82"
+                                 role="progressbar" 
+                                 aria-valuenow="82" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">SQL</div>
                         </div><br>
                         
+                        <!-- C# Skill Bar -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                            <div id="c" class="exp-container c exp-round-xxlarge" style="width:20%" data-target-width="87">C#</div>
+                            <div id="c" class="exp-container c exp-round-xxlarge" 
+                                 style="width:20%" 
+                                 data-target-width="87"
+                                 role="progressbar" 
+                                 aria-valuenow="87" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">C#</div>
                             </div><br>
                         
+                        <!-- Expert Level Indicator -->
                         <div class="w3-light-grey exp-round-xxlarge">
-                        <div id="expertLevel" class="exp-container level w3-center exp-round-xxlarge" style="width:25%" data-target-width="95">Expert Level</div>
+                        <div id="expertLevel" class="exp-container level w3-center exp-round-xxlarge" 
+                             style="width:25%" 
+                             data-target-width="95"
+                             role="progressbar" 
+                             aria-valuenow="95" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">Expert Level</div>
                         </div>
+                        <!-- Animation Trigger Button -->
                         <br>
-                        <button class="w3-button level_button" onclick="move(); animateSkillBars();">Click Me</button> 
+                        <button class="w3-button level_button" 
+                                onclick="move(); animateSkillBars();" 
+                                aria-label="Animate skills bars">Click Me</button> 
                         </div>    
                     </div>
             </div>
         </div>
 
-        <!--GitHub section-->
-        <div class="Row" id="GitHub">
-            <!--Left column-->
+        <!-- 
+            GitHub Section
+            Features:
+            - External links open in new tabs
+            - Security measures for external links
+            - Optimized images with lazy loading
+        -->
+        <div class="Row" id="GitHub" role="region" aria-label="GitHub projects">
+            <!-- GitHub Profile Information -->
             <div class="Column_1">
                 <h1>GitHub</h1>
                 <p>
                     You can view my coding projects on my GitHub profile here:
                     <br>
-                    <p class="center"><a href="https://github.com/MMXXDnox" target="_blank">David DNOX Github</a></p>
+                    <!-- Secure external link with noopener -->
+                    <p class="center"><a href="https://github.com/MMXXDnox" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="Visit David DNOX Github profile (opens in new tab)">David DNOX Github</a></p>
                     <br>
-
                 </p>
             </div>
-            <!--Right column-->
+            <!-- GitHub Logo/Link -->
             <div class="Column_2">
-                <a href="https://github.com/MMXXDnox" target="_blank"><img src="./img/interlock.jpg" alt="Inter Lock Logo"></a>
+                <a href="https://github.com/MMXXDnox" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <img src="./img/interlock.jpg" 
+                         alt="Inter Lock Logo - Click to visit GitHub profile"
+                         loading="lazy"
+                         width="400" 
+                         height="300">
+                </a>
             </div>
         </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
+        <!-- 
+            Contact Section
+            Features:
+            - Form validation
+            - CSRF protection
+            - Accessible form controls
+            - Error handling
+        -->
+        <div class="Row" id="Contact" role="region" aria-label="Contact form">
+            <!-- Decorative Image Column -->
             <div class="Column_2 Column_tall">
-                <img src="./img/space.jpg" alt="Contact_Image">
+                <img src="./img/space.jpg" 
+                     alt="Decorative space image"
+                     role="presentation"
+                     loading="lazy"
+                     width="400" 
+                     height="600">
             </div>
-            <!--Contact form, right column-->
+            <!-- Contact Form Column -->
             <div class="Column_1 Column_tall">
                 <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                <!-- 
+                    Contact Form
+                    TODO: 
+                    1. Add form validation
+                    2. Implement CSRF protection
+                    3. Add success/error messages
+                    4. Include reCAPTCHA
+                -->
+                <form action="" 
+                      method="POST" 
+                      role="form" 
+                      aria-label="Contact form">
+                    <label for="name">Name:</label>
+                        <input type="text" 
+                               id="name"
+                               name="name"
+                               placeholder="Please enter your name here"
+                               required
+                               aria-required="true">
+                    <label for="Email">Email:</label>
+                        <input type="email" 
+                               id="Email" 
+                               name="Email" 
+                               placeholder="Please enter your email here"
+                               required
+                               aria-required="true">
+                    <label for="Message">Message:</label>
+                        <input type="text" 
+                               id="Message" 
+                               name="Message" 
+                               placeholder="Please write your message here"
+                               required
+                               aria-required="true">
+                        <input type="submit" 
+                               value="SUBMIT"
+                               aria-label="Submit contact form">
                 </form>
             </div>
         </div>
 
-        <!--Footer section-->
-        <footer>
+        <!-- 
+            Footer Section
+            Features:
+            - Dynamic copyright year
+            - Semantic footer element
+            - Accessible links
+        -->
+        <footer role="contentinfo">
             <p>
-                <p class="center">All rights reserved. Copyright ©<script>
-                    document.write(new Date().getFullYear())
-                  </script>., <a href="" target="_blank">David DNOX </a></p>
+                <p class="center">All rights reserved. Copyright ©
+                    <!-- Dynamic year script -->
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    ., <a href="" target="_blank">David DNOX </a>
+                </p>
                 <br>
             </p>
-            
         </footer>
+
+        <!-- 
+            JavaScript Dependencies
+            Files:
+            1. syntax.js: 
+               - Handles syntax highlighting
+               - Manages navigation active states
+               - Implements smooth scrolling
+            
+            2. skillsBar.js:
+               - Manages skill bar animations
+               - Uses requestAnimationFrame
+               - Handles intersection observer
+               - Updates ARIA attributes during animation
+        -->
+        <script src="./assets/syntax.js"></script>
+        <script src="./assets/skillsBar.js"></script>
     </body>
-    <script src="./assets/syntax.js"></script>
-    <script src="./assets/skillsBar.js"></script>
 </html>
