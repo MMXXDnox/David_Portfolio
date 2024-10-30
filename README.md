@@ -1,4 +1,4 @@
-# 👋 Hi, I'm MMXXDnox
+# 👋 Hi, I'm David 'Dnox' 
 
 ## 🚀 About Me
 Passionate developer focused on creating innovative solutions. I enjoy working with various technologies and contributing to the developer community.
@@ -20,7 +20,7 @@ Passionate developer focused on creating innovative solutions. I enjoy working w
 
 ## 🌟 Featured Projects
 
-David's HTML and CSS Projects
+##### David's HTML and CSS Projects
 
 This is a display of sample websites that I made using HTML and CSS.
 
@@ -71,7 +71,7 @@ CSS and HTML This page is and
 Brief description of your project and its impact.
 
 ###  David_Single_Page_Site 
-Brief description of your project and its impact.
+This is my single page web app repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
 
 ### MD24
 Brief description of my project and its impact, Hmmm call me we will chat about it.
@@ -80,7 +80,7 @@ Brief description of my project and its impact, Hmmm call me we will chat about 
 This is my demonstration how I use Bootstrap to create a responsive website, Enhanced website using Bootstrap and demonstrate my understanding of Bootstrap.
 
 ### HTML_and_CSS_Website_Assignment 
-Brief description of your project and its impact.
+This is my repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript..
 
 ### Basic_HTML_and_CSS
 HTML and CSS Project
