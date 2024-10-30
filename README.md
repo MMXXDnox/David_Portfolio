@@ -68,7 +68,7 @@ CSS and HTML This page is and
 
 
 ### Accademy_Final_Challenge5 
-Brief description of your project and its impact.
+This is my Challange 5 page web app repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
 
 ###  David_Single_Page_Site 
 This is my single page web app repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
