@@ -25,7 +25,7 @@ David's HTML and CSS Projects
 This is a display of sample websites that I made using HTML and CSS.
 
 
-### [David_Portfolio ]
+### David_Portfolio 
 This portfolio site serves as both a professional presentation platform and a demonstration of technical capabilities, combining modern web development practices with effective personal branding
 CSS and HTML This page is and 
 
@@ -67,38 +67,38 @@ CSS and HTML This page is and
    - Responsive navigation menu
 
 
-### [Accademy_Final_Challenge5 ]
+### Accademy_Final_Challenge5 
 Brief description of your project and its impact.
 
-### [ David_Single_Page_Site ] 
+###  David_Single_Page_Site 
 Brief description of your project and its impact.
 
-### [ MD24   ] 
+### MD24
 Brief description of my project and its impact, Hmmm call me we will chat about it.
 
-### [ bootstrap4project ] 
+###  bootstrap4project 
 This is my demonstration how I use Bootstrap to create a responsive website, Enhanced website using Bootstrap and demonstrate my understanding of Bootstrap.
 
-### [ HTML_and_CSS_Website_Assignment ]
+### HTML_and_CSS_Website_Assignment 
 Brief description of your project and its impact.
 
-### [ Basic_HTML_and_CSS ]
+### Basic_HTML_and_CSS
 HTML and CSS Project
 
 This is a display of series of sample webpages that I made using HTML and CSS.
 
 Multi Projects
 
-### [ One-Page-Website ] 
+### One-Page-Website
 This is my One page HTML Assignment that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
 
-### [ Basic_HTML_and_JavaScript_1 ] 
+### Basic_HTML_and_JavaScript_1
 This is my repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
 
-### [ Cake-HTML-Doc-Assingment ] 
+### Cake-HTML-Doc-Assingment 
 This is my repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
 
-### [ HTML-and-CSS-Projects ]
+### HTML-and-CSS-Projects 
 This is my repository that has examples and course work demonstrating my understanding of HTML, CSS and JavaScript.
 
 ## 🌐 Connect With Me
